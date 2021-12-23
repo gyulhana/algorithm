@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n){
+                // my solution
+                let answer;
+                console.log(Math.ceil(n / 12)); // 나머지 있으면 무조건 반올림
+                return n % 12 === 0 ? n / 12 
+                        : (n % 12 >= 0) ? Math.floor(n / 12) + 1 
+                        : Math.floor(n / 12) - 1;
+            }
+
+            console.log(solution(178));
+        </script>
+    </body>
+</html>
