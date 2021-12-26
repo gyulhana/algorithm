@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(str){
+                // my solution
+                const letter = str.toLowerCase().split("");
+                const string = str.split("");
+                let count = 0;
+
+                for (let i = 0; i < string.length; i++) {
+                    if (letter[i] !== string[i]) count++;
+                }
+                return count;
+            }
+            console.log(solution("KoreaTimeGood"));
+        </script>
+    </body>
+</html>
