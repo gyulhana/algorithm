@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c, d, e, f, g){
+                // my solution
+                const arr = [a, b, c, d, e, f, g];
+                const odd = arr.filter((a) => a % 2 === 1);
+
+                console.log(Math.min(...odd));
+                console.log(odd.reduce((a, b) => a + b, 0));
+            }
+
+            console.log(solution(12, 77, 38, 53, 92, 85, 41));
+        </script>
+    </body>
+</html>
