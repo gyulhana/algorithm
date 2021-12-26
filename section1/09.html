@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(str){
+                // my solution
+                const answer = [];
+                str.split("").map((s) => {
+                    if (s === "A") {
+                      answer.push("#");  
+                } else answer.push(s);
+            })
+            return answer.join("");
+            }
+            console.log(solution("BANANA"));
+        </script>
+    </body>
+</html>
