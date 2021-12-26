@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){
+                // my solution
+                const sum = arr.reduce((a, b) => a + b, 0);
+                const answer = [];
+                for (const a of arr) {
+                    for (const b of arr) {
+                        if (answer.length !== 2 && a !== b && a + b === sum - 100) {
+                            answer.push(a);
+                            answer.push(b);
+                        }
+                    }
+                }
+                return arr.filter((a) => answer.indexOf(a) === -1);
+            }
+
+            console.log(...solution([20, 7, 23, 19, 10, 15, 25, 8, 13]));
+        </script>
+    </body>
+</html>
