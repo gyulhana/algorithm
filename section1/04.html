@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n){
+                // my solution
+                let start_point = 0;
+                let sum = 0;
+                while (start_point < n + 1) {
+                    sum += start_point;
+                    start_point++;
+                }
+                return sum;
+            }
+
+            console.log(solution(6));
+            console.log(solution(10));
+
+        </script>
+    </body>
+</html>
