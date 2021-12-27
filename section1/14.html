@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n, arr){
+                // my solution
+                const lengths = [];
+                arr.map((a) => lengths.push(a.length));
+                const max = Math.max(...lengths);
+                return arr.filter((a) => a.length === max).join("")
+            }
+            console.log(solution(5, ["teacher", "time", "student", "beautiful", "good"]));
+        </script>
+    </body>
+</html>
