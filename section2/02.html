@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n, arr){
+                let count = 0;
+                let max = Number.MIN_SAFE_INTEGER;
+                for (const a of arr) {
+                    if (a > max) {
+                        count++;
+                        max = a;
+                    }
+                }
+                return count;
+            }
+
+            console.log(solution(8, [130, 135, 148, 140, 145, 150, 150, 153]));
+        </script>
+    </body>
+</html>
