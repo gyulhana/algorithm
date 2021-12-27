@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n, arr){
+                // my solution
+                const answer = [];
+                arr.map((a) => answer.indexOf(a) === -1 && answer.push(a));
+                return answer.join("\n");
+            }
+            console.log(solution(5, ["good", "time", "good", "time", "student"]));
+        </script>
+    </body>
+</html>
