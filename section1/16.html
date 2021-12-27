@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(str){
+                // my solution
+                const arr = str.split("");
+                const answer = [];
+                arr.map((a) => {
+                    answer.indexOf(a) === -1 && answer.push(a);
+                })
+                return answer.join("")
+            }
+            console.log(solution("study"));
+            console.log(solution("uniqqqueone"));
+            console.log(solution("gooddayz"));
+            console.log(solution("ksekkset"));
+        </script>
+    </body>
+</html>
