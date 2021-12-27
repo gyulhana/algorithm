@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(str){
+                // my solution
+
+                const capital = str.toUpperCase();
+                const letter = str.toLowerCase();
+                const answer = [];
+                for (let i = 0; i < capital.length; i++) {
+                    capital[i] === str[i] ? answer.push(letter[i]) : answer.push(capital[i]);
+                }
+                return answer.join("");
+            }
+            console.log(solution("KoreaTimeGood"));
+        </script>
+    </body>
+</html>
