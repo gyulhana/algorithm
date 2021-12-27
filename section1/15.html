@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(str){
+                // my solution
+                const arr = str.split("")
+                if (str.length % 2 === 1) {
+                    return arr[Math.floor(str.length / 2)];
+                } else {
+                    return arr[str.length / 2 - 1] + arr[str.length / 2];
+                }
+            }
+            console.log(solution("study"));
+            console.log(solution("uniqqqueone"));
+            console.log(solution("gooddayz"));
+        </script>
+    </body>
+</html>
