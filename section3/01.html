@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(string){
+                const l = string.length;
+                const str = string.toLowerCase();
+
+                if (l % 2 === 1) {
+                    for (let i = 0; i < Math.floor(l / 2); i++) {
+                        if (str[i] !== str[l - i - 1]) return "NO"
+                    }
+                } else {
+                    for (let i = 0; i < Math.floor(l / 2); i++) {
+                        if (str[i] !== str[l - i - 1]) return "NO"
+                    }
+                }
+                return "YES";
+            }
+            console.log(solution("ggoogG"));
+            console.log(solution("yesey"));
+            console.log(solution("yes"));
+        </script>
+    </body>
+</html>
