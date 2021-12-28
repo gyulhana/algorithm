@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(string){
+                const letter = "abcdefghijklmnopqrstuvwxyz"
+                const str = string.toLowerCase().split("").filter(s => letter.indexOf(s) !== -1);
+                return str.join("") === str.reverse().join("") ? "YES" : "NO";
+            }
+            console.log(solution("found7, time: study; Yduts; emit, 7Dnuof"));
+        </script>
+    </body>
+</html>
