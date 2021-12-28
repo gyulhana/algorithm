@@ -6,13 +6,26 @@
     <body>
         <script>
             function solution(arr){
+                // my solution
                 let answer = [];
                 const order = arr.slice(0, 5).sort((a, b) => b - a);
                 order.map((el) => answer.push(arr.indexOf(el) + 1));
                 return answer.join(" ");
+                // issue : 같은 점수가 값으로 들어왔을 때 동점 처리 못 한다고 착각했지만 indexOf에서 가장 첫번째 값의 index만 뽑아주기 때문에 괜찮음
+                
+                // solution example
+                const n = arr.length;
+                const answer1 = Array.from({length:n}, ()=>1);
+                for (let i = 0; i < n; i++) {
+                    for (let j = 0; j < n; j++){
+                        if (arr[j] > arr[i]) answer1[i]++;
+                    }
+                }
+                console.log(answer1);
             }
 
-            console.log(solution([87, 89, 92, 100, 76]));
+
+            console.log(solution([93, 92, 92, 100, 76]));
         </script>
     </body>
 </html>
