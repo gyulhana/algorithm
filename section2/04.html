@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){
+                let answer = 0;
+                let score = 1;
+
+                arr.map((el) => {
+                    if (el === 1) {
+                        answer+=score;
+                        score++;
+                    } else {
+                        score = 1;
+                    }
+                })
+
+                return answer;
+            }
+
+            console.log(solution([1, 0, 1, 1, 1, 0, 0, 1, 1, 0]));
+        </script>
+    </body>
+</html>
