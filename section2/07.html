@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){
+                // my solution
+                const n = arr.length;
+                const newArr = Array.from({length: n + 2}, () => 0);
+                const realArr = [];
+                realArr.push(...arr)
+                realArr.map((el) => {
+                    el.unshift(0);
+                    el.push(0);
+                });
+                realArr.push(newArr);
+                realArr.unshift(newArr);
+                const m = realArr.length;
+                let count = 0;
+                for (let i = 1; i < m - 1; i++) {
+                    for (let j = 1; j < m - 1; j++) {
+                        if (realArr[i][j] === Math.max(realArr[i][j-1], realArr[i][j+1], realArr[i][j], realArr[i-1][j], realArr[i+1][j])) count++;
+                    }
+                }
+
+             return count;
+            }
+            let arr=[[5, 3, 7, 2, 3], 
+                     [3, 7, 1, 6, 1],
+                     [7, 2, 5, 3, 4],
+                     [4, 3, 6, 4, 1],
+                     [8, 7, 3, 5, 2]];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>
