@@ -6,11 +6,13 @@
     <body>
         <script>
             function solution(string){
-                const letter = "abcdefghijklmnopqrstuvwxyz"
-                const str = string.toLowerCase().split("").filter(s => letter.indexOf(s) !== -1);
-                return str.join("") === str.reverse().join("") ? "YES" : "NO";
+                const str = string.toLowerCase().replace(/[^a-z]/g, "").split("");
+                const origin = str.join("")
+                const reverse = str.reverse().join("");
+                return origin === reverse ? "YES" : "NO";
             }
             console.log(solution("found7, time: study; Yduts; emit, 7Dnuof"));
+            console.log(solution("cos::daq"));
         </script>
     </body>
 </html>
