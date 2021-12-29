@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(string){
+                string = string + " ";
+                const length = string.length;
+                let answer = ""
+
+                let letter = "";
+                let count = 1;
+
+                for (let i = 0; i < length - 1; i++) {
+                    letter = string[i];
+                    if (string[i] === string[i+1]) {
+                        count++;
+                    } else {
+                        answer += string[i];
+                        count > 1 ? answer += count : undefined;
+                        count = 1;
+                    }
+                }
+                return answer;
+            }
+            console.log(solution("KKHSSSSSSSE"));
+        </script>
+    </body>
+</html>
