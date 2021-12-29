@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(string, spell){
+                const arr = string.split("");
+                const location = [];
+                let index = arr.indexOf(spell);
+                while (index !== -1) {
+                    location.push(index);
+                    index = arr.indexOf(spell, index + 1);
+                }
+                const answer = [];
+                for (const a of arr) {
+                    let min = Number.MAX_SAFE_INTEGER;
+                    const al = arr.indexOf(a);
+                    for (const b of location) {
+                        Math.abs(al - b) < min ? min = Math.abs(al - b) : undefined;
+                    }
+                    answer.push(min);
+                }
+                return answer.join(" ");
+            }
+            console.log(solution("teachermode", "e"));
+        </script>
+    </body>
+</html>
