@@ -1,11 +1,16 @@
 function solution(arr1, arr2) {
+  arr1.sort();
+  arr2.sort();
+  let p1 = 0;
+  let p2 = 0;
   const answer = [];
-  [...arr1, ...arr2]
-    .sort()
-    .filter((el) => arr1.indexOf(el) > -1 && arr2.indexOf(el) > -1)
-    .map((el) => {
-      if (answer.indexOf(el) === -1) answer.push(el);
-    });
+  while (p1 < arr1.length && p2 < arr2.length) {
+    if (arr1[p1] === arr2[p2]) {
+      answer.push(arr1[p1++]);
+      p2++;
+    } else if (arr1[p1] < arr2[p2]) p1++;
+    else p2++;
+  }
   return answer;
 }
 
