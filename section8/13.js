@@ -4,6 +4,7 @@ const solution = (n, big) => {
   const ch = Array.from({ length: n + 1 }, () => 0);
   const p = Array.from({ length: n }, () => 0);
   const b = Array.from({ length: n }, () => 0);
+  let flag;
 
   const combi = (s, l) => {
     if (dy[s][l] > 0) return dy[s][l];
